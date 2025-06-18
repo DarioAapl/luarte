@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucanino Brigante</title>
+<meta charset="UTF-8" />
+<title>Lucianino Brigante</title>
+
   <style>
     body {
       margin: 0;
@@ -11,17 +11,36 @@
       background-color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      text-align: center;
     }
 
     .fade-in {
       opacity: 0;
       animation: fadeIn 2s ease-in-out forwards;
       font-size: 2rem;
-      text-align: center;
       color: #222;
+    }
+
+    .under-construction {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #666;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 1s forwards;
+    }
+
+    .memoji {
+      margin-top: 2rem;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 1.5s forwards;
     }
 
     @keyframes fadeIn {
@@ -35,5 +54,13 @@
   <div class="fade-in">
     Hallo, willkommen zur Seite von <strong>Lucianino Brigante</strong>
   </div>
+  <div class="under-construction">
+    Diese Website befindet sich im Aufbau.
+  </div>
+  <img
+    class="memoji"
+    src="lucianino-memoji.png"
+    alt="Memoji von Lucianino Brigante"
+  />
 </body>
 </html>
