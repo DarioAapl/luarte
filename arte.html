@@ -1,3 +1,4 @@
+<!-- arte.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,24 +9,35 @@
   <link rel="icon" type="image/png" href="lucianino-memoji.png" />
 </head>
 <body>
-<nav class="top-nav">
-  <div class="nav-content">
-    <a href="index.html" class="logo-link">
-      <img src="luarte-logo.png" alt="Luarte Logo" class="nav-logo" />
-    </a>
-    <ul>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="arte.html">Arte</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav class="top-nav">
+    <div class="nav-content">
+      <a href="index.html" class="logo-link">
+        <img src="luarte-logo.png" alt="Luarte Logo" class="nav-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="music.html">Music</a></li>
+        <li><a href="arte.html">Arte</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
   <div class="container">
     <h1>Arte – Kunst & Kreativität</h1>
     <p>Hier findest du künstlerische Werke, visuelle Experimente und visuelle Ausdrucksformen von Lucianino.</p>
   </div>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,30 +8,39 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="lucianino-memoji.png" />
 </head>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('open');
+  }
+</script>
 <body>
-<nav class="top-nav">
-  <div class="nav-content">
-    <a href="index.html" class="logo-link">
-      <img src="luarte-logo.png" alt="Luarte Logo" class="nav-logo" />
-    </a>
-<ul class="nav-links">
-  <li><a href="music.html">Music</a></li>
-  <li><a href="arte.html">Arte</a></li>
-  <li><a href="about.html">About Me</a></li>
-  <li><a href="index.html">Home</a></li>
-</ul>
-  </div>
-</nav>
+  <nav class="top-nav">
+    <div class="nav-content">
+      <a href="index.html" class="logo-link">
+        <img src="luarte-logo.png" alt="Luarte Logo" class="nav-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="music.html">Music</a></li>
+        <li><a href="arte.html">Arte</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
   <div class="container">
     <img src="luarte-logo.png" alt="Luarte Logo" class="top-logo" />
-
     <div class="text-content">
       <div class="fade-in">
         Hallo, willkommen zur Seite von <strong>Lucianino Brigante</strong>
       </div>
-
       <div class="under-construction">
         Diese Website befindet sich im Aufbau.
       </div>
