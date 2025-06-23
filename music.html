@@ -1,4 +1,7 @@
-<!-- music.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music</title>
   <link rel="stylesheet" href="style.css" />
@@ -27,13 +30,46 @@
 
   <div class="container">
     <h1>Musik</h1>
-    <p>Hier werden Tracks, Alben, Musikvideos oder Spotify-Verknüpfungen von Lucianino erscheinen.</p>
+    <p>Hier werden Tracks, Alben, Musikvideos oder Spotify-/SoundCloud-Verknüpfungen von Lucianino erscheinen.</p>
   </div>
+
+  <!-- 🎵 MUSIC LIST GOES HERE -->
+  <div class="container" id="music-list"></div>
+
   <script>
     function toggleMenu() {
       const nav = document.querySelector('.nav-links');
       nav.classList.toggle('open');
     }
+
+    // Load music cards from backend
+    fetch('/api/music')
+      .then(res => res.json())
+      .then(music => {
+        const list = document.getElementById('music-list');
+        music.forEach(card => {
+          const div = document.createElement('div');
+          div.style.marginBottom = '30px';
+          div.style.padding = '10px';
+          div.style.border = '1px solid #444';
+          div.style.borderRadius = '10px';
+          div.style.backgroundColor = '#1c1c1c';
+
+          div.innerHTML = `
+            <h3>${card.title}</h3>
+            <p>${card.artist}</p>
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=${encodeURIComponent(card.link)}&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
+            </iframe>
+          `;
+          list.appendChild(div);
+        });
+      });
   </script>
 </body>
 </html>
