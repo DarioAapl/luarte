@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   height: 100vh;
@@ -33,7 +33,7 @@ body {
 
 .fade-in {
   font-size: 2rem;
-  color: #222;
+  color: #868484;
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
 }
@@ -62,13 +62,13 @@ body {
 /* --- Navigation Bar --- */
 .top-nav {
   width: 100%;
-  background-color: white;
+  background-color: rgba(37, 37, 37, 0.887);
   padding: 10px 20px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(188, 186, 186, 0.85);
 }
 
 .nav-content {
@@ -100,7 +100,7 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #222;
+  color: #959393;
   font-weight: 600;
   font-size: 1.1rem;
   transition: color 0.3s;
