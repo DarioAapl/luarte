@@ -20,7 +20,7 @@ body {
 }
 
 .top-logo {
-  width: 70vmin;
+  width: 40vmin;
   max-width: 700px;
   opacity: 1;
   animation: float 6s ease-in-out infinite;
