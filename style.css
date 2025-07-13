@@ -33,7 +33,7 @@ body {
 }
 
 .fade-in {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: rgb(255, 112, 0);
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
@@ -44,7 +44,7 @@ body {
   color: rgb(255, 112, 0);
   opacity: 0;
   animation: fadeIn 2s ease-in-out 1s forwards;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 /* Animations */
