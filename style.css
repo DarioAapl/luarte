@@ -177,3 +177,18 @@ body {
 .gallery img:hover {
   transform: scale(1.03);
 }
+
+.gallery-item {
+  width: 100%;
+  padding-top: 100%; /* square */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
