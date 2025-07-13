@@ -304,7 +304,7 @@ body {
 /* Hover effect (for all links) */
 .nav-links li a:hover {
   color: #FF7000;
-  text-shadow: 0 0 10px rgba(255, 112, 0, 0.8);
+  text-shadow: 0 0 20px rgb(255, 112, 0);
 }
 
 /* Active link (gray but still glows on hover) */
@@ -315,6 +315,6 @@ body {
 /* Active link hover glow */
 .nav-links li a.active:hover {
   color: #aaa; /* stays gray */
-  text-shadow: 0 0 10px rgba(255, 112, 0, 0.8);
+  text-shadow: 0 0 20px rgb(255, 112, 0);
 }
 
