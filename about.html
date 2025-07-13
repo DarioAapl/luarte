@@ -16,22 +16,21 @@
       </a>
       <ul class="nav-links">
         <li><a href="arte.html">LuArte</a></li>
-         <li><a href="gallerie.html">LuGallerie</a></li>
+        <li><a href="gallerie.html">LuGallerie</a></li>
         <li><a href="music.html">LuMusic</a></li>
         <li><a href="about.html">Lucianino</a></li>
       </ul>
-          <!-- Right logo + language -->
-    <div class="right-section">
-           <select class="language-select" onchange="changeLanguage(this.value)">
-        <option value="de">DE</option>
-        <option value="en">EN</option>
-        <option value="it">IT</option>
-        <option value="fr">FR</option>
-      </select>
-     <a href="index.html" class="logo-link">
-      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
-    </a>
-    </div>
+      <div class="right-section">
+        <select class="language-select" onchange="changeLanguage(this.value)">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+          <option value="fr">FR</option>
+        </select>
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -42,26 +41,39 @@
   </div>
 
   <div class="container">
-    <h1>Über Lucianino Brigante</h1>
-    <p>Hier entsteht eine persönliche Seite über Lucianino – seine Vision, Projekte und kreative Reise.</p>
+    <h1>Lucianino Brigante – Links</h1>
+    <div class="card-grid">
+      <a href="https://apple.com" class="card" target="_blank">
+        <h2>Apple</h2>
+      </a>
+      <a href="https://kinocheck.de" class="card" target="_blank">
+        <h2>Kinocheck</h2>
+      </a>
+      <a href="https://bamix.ch" class="card" target="_blank">
+        <h2>Bamix</h2>
+      </a>
+      <a href="https://zwilling.com" class="card" target="_blank">
+        <h2>Zwilling</h2>
+      </a>
+      <a href="https://dariotino.com" class="card" target="_blank">
+        <h2>Dario Tino</h2>
+      </a>
+    </div>
   </div>
 
-<script>
-  function changeLanguage(lang) {
-    alert("Sprache ändern zu: " + lang.toUpperCase());
-    // Later: redirect to appropriate folder or page
-    // window.location.href = `/${lang}/index.html`;
-  }
-</script>
-<script>
-  function changeLanguage(lang) {
-    if (lang === 'en') {
-      window.location.href = 'en_index.html';
-    } else {
-      alert("Only English is available right now.");
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('open');
     }
-  }
-</script>
 
+    function changeLanguage(lang) {
+      if (lang === 'en') {
+        window.location.href = 'en_index.html';
+      } else {
+        alert("Only English is available right now.");
+      }
+    }
+  </script>
 </body>
 </html>

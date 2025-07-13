@@ -268,3 +268,26 @@ body {
   font-size: 0.9rem;
   border-radius: 5px;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #ff5800;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  color: #ff7000;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(255, 112, 0, 0.6);
+}
