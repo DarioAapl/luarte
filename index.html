@@ -15,19 +15,36 @@
   }
 </script>
 <body>
-  <nav class="top-nav">
-    <div class="nav-content">
-      <a href="index.html" class="logo-link">
-        <img src="minimal_logo.png" alt="Luarte Logo" class="nav-logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="arte.html">LuArte</a></li>
-         <li><a href="gallerie.html">LuGallerie</a></li>
-        <li><a href="music.html">LuMusic</a></li>
-        <li><a href="about.html">Lucianino</a></li>
-      </ul>
+<nav class="top-nav">
+  <div class="nav-content">
+    <!-- Left logo -->
+    <a href="index.html" class="logo-link">
+      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+    </a>
+
+    <!-- Center nav links -->
+    <ul class="nav-links">
+      <li><a href="arte.html">LuArte</a></li>
+      <li><a href="gallerie.html">LuGallerie</a></li>
+      <li><a href="music.html">LuMusic</a></li>
+      <li><a href="about.html">Lucianino</a></li>
+    </ul>
+
+    <!-- Right logo + language -->
+    <div class="right-section">
+           <select class="language-select" onchange="changeLanguage(this.value)">
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+        <option value="fr">FR</option>
+      </select>
+     <a href="index.html" class="logo-link">
+      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+    </a>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <div class="burger" onclick="toggleMenu()">
     <div></div>
@@ -44,14 +61,6 @@
       <div class="under-construction">
         designed von Luciano Brigante, programmiert von Dario Tino
       </div>
-      <div class="language-dropdown">
-  <select onchange="changeLanguage(this.value)">
-    <option value="de">🇩🇪 Deutsch</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="it">🇮🇹 Italiano</option>
-    <option value="fr">🇫🇷 Français</option>
-  </select>
-</div>
 <script>
   function changeLanguage(lang) {
     if (lang === 'en') {

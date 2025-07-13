@@ -20,6 +20,19 @@
         <li><a href="music.html">LuMusic</a></li>
         <li><a href="about.html">Lucianino</a></li>
       </ul>
+
+          <!-- Right logo + language -->
+    <div class="right-section">
+           <select class="language-select" onchange="changeLanguage(this.value)">
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+        <option value="fr">FR</option>
+      </select>
+     <a href="index.html" class="logo-link">
+      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+    </a>
+    </div>
     </div>
   </nav>
 
@@ -31,7 +44,6 @@
 
   <div class="container">
    
-    
 <div class="gallery">
   <div class="gallery-item"><img src="gal1.jpg" alt="Artwork 1" /></div>
   <div class="gallery-item"><img src="gal2.jpg" alt="Artwork 2" /></div>
@@ -46,15 +58,7 @@
   <div class="gallery-item"><img src="gal11.jpg" alt="Artwork 11" /></div>
   <div class="gallery-item"><img src="gal12.jpg" alt="Artwork 12" /></div>
 </div>
-  </div>
- <div class="language-dropdown">
-  <select onchange="changeLanguage(this.value)">
-    <option value="de">🇩🇪 Deutsch</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="it">🇮🇹 Italiano</option>
-    <option value="fr">🇫🇷 Français</option>
-  </select>
-</div>
+
 <script>
   function changeLanguage(lang) {
     if (lang === 'en') {
