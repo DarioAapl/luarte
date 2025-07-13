@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucianino Brigante</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="lucianino-memoji.png" />
+</head>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('open');
+  }
+</script>
+<body>
+  <nav class="top-nav">
+    <div class="nav-content">
+      <a href="index.html" class="logo-link">
+        <img src="../minimal_logo.png" alt="Luarte Logo" class="nav-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="arte.html">LuArte</a></li>
+         <li><a href="gallerie.html">LuGallerie</a></li>
+        <li><a href="music.html">LuMusic</a></li>
+        <li><a href="about.html">Lucianino</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="container">
+    <img src="../luarte-logo.png" alt="Luarte Logo" class="top-logo" />
+    <div class="text-content">
+      <div class="fade-in">
+        Hello, welcome to <strong>Lucianino Brigante's</strong> website
+      </div>
+      <div class="under-construction">
+        designed by Luciano Brigante, created by Dario Tino
+      </div>
+      <div class="language-dropdown">
+  <select onchange="changeLanguage(this.value)">
+    <option value="en">🇬🇧 English</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="fr">🇫🇷 Français</option>
+  </select>
+</div>
+<script>
+  function changeLanguage(lang) {
+    if (lang === 'en') {
+      window.location.href = 'en_index.html';
+    } else {
+      alert("Only English is available right now.");
+    }
+  }
+</script>
+
+    </div>
+  </div>
+</body>
+</html>
