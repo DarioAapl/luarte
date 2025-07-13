@@ -340,3 +340,11 @@ body {
   transition: filter 0.3s ease;
 }
 
+.language-select:hover {
+  filter: drop-shadow(0 0 1px #ffb347)
+          drop-shadow(0 0 2px #ff8000)
+          drop-shadow(0 0 3px #ff6600)
+          drop-shadow(0 0 4px #ff3300)
+          drop-shadow(0 0 6px #ff0000);
+  transition: filter 0.3s ease;
+}
