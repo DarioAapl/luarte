@@ -302,19 +302,41 @@ body {
 }
 
 /* Hover effect (for all links) */
-.nav-links li a:hover {
-  color: #FF7000;
-  text-shadow: 0 0 20px rgb(255, 112, 0);
-}
-
-/* Active link (gray but still glows on hover) */
-.nav-links li a.active {
-  color: #aaa;
-}
-
-/* Active link hover glow */
+.nav-links li a:hover,
 .nav-links li a.active:hover {
-  color: #aaa; /* stays gray */
-  text-shadow: 0 0 20px rgb(255, 112, 0);
+  color: #FF5800;
+  text-shadow:
+    0 0 1px #ffb347,
+    0 0 2px #ff8000,
+    0 0 3px #ff6600,
+    0 0 4px #ff3300,
+    0 0 6px #ff0000;
+}
+
+
+/* Active link (gray) */
+.nav-links li a.active {
+  color: #888; /* or your preferred gray */
+}
+
+/* Active link hover effect */
+.nav-links li a.active:hover {
+  color: #888;
+  text-shadow:
+    0 0 1px #ffb347,
+    0 0 2px #ff8000,
+    0 0 3px #ff6600,
+    0 0 4px #ff3300,
+    0 0 6px #ff0000;
+}
+
+/* Logo glow on hover */
+.nav-logo:hover {
+  filter: drop-shadow(0 0 1px #ffb347)
+          drop-shadow(0 0 2px #ff8000)
+          drop-shadow(0 0 3px #ff6600)
+          drop-shadow(0 0 4px #ff3300)
+          drop-shadow(0 0 6px #ff0000);
+  transition: filter 0.3s ease;
 }
 
