@@ -1,9 +1,10 @@
+<!-- music.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music</title>
+  <title>LuMusic</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="lucianino-memoji.png" />
 </head>
@@ -15,61 +16,59 @@
       </a>
       <ul class="nav-links">
         <li><a href="arte.html">LuArte</a></li>
-         <li><a href="gallerie.html">LuGallerie</a></li>
+        <li><a href="gallerie.html">LuGallerie</a></li>
         <li><a href="music.html">LuMusic</a></li>
         <li><a href="about.html">Lucianino</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="burger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+  <div class="container music-container">
+    <h1>LuMusic 🎧</h1>
+    <div class="music-grid">
+      <!-- Music Card 1 -->
+      <a class="music-card" href="https://www.youtube.com/watch?v=w019MzRosmk&list=RDw019MzRosmk&start_radio=1" target="_blank">
+        <div class="music-thumb">🎵</div>
+        <h3>Lucianino Musica 1</h3>
+      </a>
+
+      <!-- Music Card 2 -->
+      <a class="music-card" href="https://www.youtube.com/watch?v=TK0Vdb1RUCk&list=RDTK0Vdb1RUCk&start_radio=1" target="_blank">
+        <div class="music-thumb">🎶</div>
+        <h3>Lucianino Musica 2</h3>
+      </a>
+
+      <!-- Music Card 3 -->
+      <a class="music-card" href="https://www.youtube.com/watch?v=avU2aarQUiU&list=RDavU2aarQUiU&start_radio=1" target="_blank">
+        <div class="music-thumb">🔥</div>
+        <h3>Lucianino Musica 3</h3>
+      </a>
+    </div>
   </div>
 
-  <div class="container">
-    <h1>Musik</h1>
-    <p>Hier werden Tracks, Alben, Musikvideos oder Spotify-/SoundCloud-Verknüpfungen von Lucianino erscheinen.</p>
-  </div>
-
-  <!-- 🎵 MUSIC LIST GOES HERE -->
-  <div class="container" id="music-list"></div>
+ <div class="language-dropdown">
+  <select onchange="changeLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="fr">🇫🇷 Français</option>
+  </select>
+</div>
+<script>
+  function changeLanguage(lang) {
+    if (lang === 'en') {
+      window.location.href = 'en_index.html';
+    } else {
+      alert("Only English is available right now.");
+    }
+  }
+</script>
 
   <script>
     function toggleMenu() {
       const nav = document.querySelector('.nav-links');
       nav.classList.toggle('open');
     }
-
-    // Load music cards from backend
-    fetch('/api/music')
-      .then(res => res.json())
-      .then(music => {
-        const list = document.getElementById('music-list');
-        music.forEach(card => {
-          const div = document.createElement('div');
-          div.style.marginBottom = '30px';
-          div.style.padding = '10px';
-          div.style.border = '1px solid #444';
-          div.style.borderRadius = '10px';
-          div.style.backgroundColor = '#1c1c1c';
-
-          div.innerHTML = `
-            <h3>${card.title}</h3>
-            <p>${card.artist}</p>
-            <iframe
-              width="100%"
-              height="166"
-              scrolling="no"
-              frameborder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=${encodeURIComponent(card.link)}&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
-            </iframe>
-          `;
-          list.appendChild(div);
-        });
-      });
   </script>
 </body>
 </html>

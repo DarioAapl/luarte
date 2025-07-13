@@ -196,3 +196,59 @@ body {
   z-index: 10;
 }
 
+.music-container {
+  padding-top: 100px;
+  text-align: center;
+  color: #ff7000;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.music-card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 1rem;
+  text-decoration: none;
+  color: #ff7000;
+  box-shadow: 0 0 10px rgba(255, 112, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 112, 0, 0.6);
+}
+
+.music-thumb {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.language-dropdown {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-dropdown select {
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #222;
+  color: #ff7000;
+  box-shadow: 0 0 10px rgba(255, 112, 0, 0.3);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.language-dropdown select:hover {
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}

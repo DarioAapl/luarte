@@ -33,11 +33,30 @@
     <h1>Über Lucianino Brigante</h1>
     <p>Hier entsteht eine persönliche Seite über Lucianino – seine Vision, Projekte und kreative Reise.</p>
   </div>
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('.nav-links');
-      nav.classList.toggle('open');
+   <div class="language-dropdown">
+  <select onchange="changeLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="fr">🇫🇷 Français</option>
+  </select>
+</div>
+<script>
+  function changeLanguage(lang) {
+    alert("Sprache ändern zu: " + lang.toUpperCase());
+    // Later: redirect to appropriate folder or page
+    // window.location.href = `/${lang}/index.html`;
+  }
+</script>
+<script>
+  function changeLanguage(lang) {
+    if (lang === 'en') {
+      window.location.href = 'en_index.html';
+    } else {
+      alert("Only English is available right now.");
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
