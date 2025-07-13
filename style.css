@@ -162,8 +162,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
-  margin-top: 2rem;
+  padding-top: 100px; /* Add this if title is gone */
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 
 .gallery-item {
   width: 100%;
