@@ -291,3 +291,30 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 0 12px rgba(255, 112, 0, 0.6);
 }
+
+/* Base link */
+.nav-links li a {
+  text-decoration: none;
+  color: #FF5800;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover effect (for all links) */
+.nav-links li a:hover {
+  color: #FF7000;
+  text-shadow: 0 0 10px rgba(255, 112, 0, 0.8);
+}
+
+/* Active link (gray but still glows on hover) */
+.nav-links li a.active {
+  color: #aaa;
+}
+
+/* Active link hover glow */
+.nav-links li a.active:hover {
+  color: #aaa; /* stays gray */
+  text-shadow: 0 0 10px rgba(255, 112, 0, 0.8);
+}
+
