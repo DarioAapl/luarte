@@ -73,13 +73,14 @@ body {
 }
 
 .nav-content {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center; /* center everything */
-  gap: 2rem;
+  justify-content: space-between; /* ← important */
+  gap: 3rem;
 }
+
 
 .nav-logo {
   height: 40px;
@@ -251,4 +252,19 @@ body {
 
 .language-dropdown select:hover {
   box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.language-select {
+  background-color: #1f1f1f;
+  color: #ff5800;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
 }
