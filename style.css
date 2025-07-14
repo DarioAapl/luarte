@@ -3,14 +3,8 @@ body {
   padding: 0;
   background-color: #1A1C1E;
   color: rgb(255, 112, 0);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .container {
@@ -161,12 +155,30 @@ body {
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
   gap: 16px;
-  padding-top: 100px; /* Add this if title is gone */
+  padding-top: 100px;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    display: block;
+    justify-content: initial;
+    align-items: initial;
+    flex-direction: initial;
+  }
+}
+
+
 
 
 .gallery-item {

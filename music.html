@@ -1,4 +1,3 @@
-<!-- music.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,27 +10,65 @@
 <body>
   <nav class="top-nav">
     <div class="nav-content">
-      <a href="index.html" class="logo-link">
-        <img src="minimal_logo.png" alt="Luarte Logo" class="nav-logo" />
-      </a>
-      <ul class="nav-links">
+
+      <!-- Mobile row -->
+      <div class="top-row">
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+        </a>
+
+        <div class="burger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <select class="language-select" onchange="changeLanguage(this.value)">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+          <option value="fr">FR</option>
+        </select>
+
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
+        </a>
+      </div>
+
+      <!-- Mobile nav links -->
+      <ul class="mobile-nav-links">
         <li><a href="arte.html">LuArte</a></li>
         <li><a href="gallerie.html">LuGallerie</a></li>
         <li><a href="music.html" class="active">LuMusic</a></li>
         <li><a href="about.html">LuLinks</a></li>
       </ul>
-          <!-- Right logo + language -->
-    <div class="right-section">
-           <select class="language-select" onchange="changeLanguage(this.value)">
-        <option value="de">DE</option>
-        <option value="en">EN</option>
-        <option value="it">IT</option>
-        <option value="fr">FR</option>
-      </select>
-     <a href="index.html" class="logo-link">
-      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
-    </a>
-    </div>
+
+      <!-- Desktop row -->
+      <div class="desktop-row">
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="arte.html">LuArte</a></li>
+          <li><a href="gallerie.html">LuGallerie</a></li>
+          <li><a href="music.html" class="active">LuMusic</a></li>
+          <li><a href="about.html">LuLinks</a></li>
+        </ul>
+
+        <div class="right-block">
+          <select class="language-select" onchange="changeLanguage(this.value)">
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+            <option value="it">IT</option>
+            <option value="fr">FR</option>
+          </select>
+          <a href="index.html" class="logo-link">
+            <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
+          </a>
+        </div>
+      </div>
+
     </div>
   </nav>
 
@@ -48,25 +85,32 @@
         <div class="music-thumb">🎶</div>
         <h3>Lucianino Musica 2</h3>
       </a>
-
     </div>
   </div>
 
-<script>
-  function changeLanguage(lang) {
-    if (lang === 'en') {
-      window.location.href = 'en_index.html';
-    } else {
-      alert("Only English is available right now.");
-    }
-  }
-</script>
-
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('.nav-links');
-      nav.classList.toggle('open');
+      const mobileNav = document.querySelector('.mobile-nav-links');
+      if (mobileNav) {
+        mobileNav.classList.toggle('open');
+      }
     }
+
+    function changeLanguage(lang) {
+      if (lang === 'en') {
+        window.location.href = 'en_index.html';
+      } else {
+        alert("Only English is available right now.");
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.mobile-nav-links').classList.remove('open');
+        });
+      });
+    });
   </script>
 </body>
 </html>

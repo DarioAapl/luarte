@@ -1,4 +1,3 @@
-<!-- arte.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,69 +10,109 @@
 <body>
   <nav class="top-nav">
     <div class="nav-content">
-      <a href="index.html" class="logo-link">
-        <img src="minimal_logo.png" alt="Luarte Logo" class="nav-logo" />
-      </a>
-      <ul class="nav-links">
+
+      <!-- Mobile row -->
+      <div class="top-row">
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+        </a>
+
+        <div class="burger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <select class="language-select" onchange="changeLanguage(this.value)">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+          <option value="fr">FR</option>
+        </select>
+
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
+        </a>
+      </div>
+
+      <!-- Mobile nav links -->
+      <ul class="mobile-nav-links">
         <li><a href="arte.html" class="active">LuArte</a></li>
         <li><a href="gallerie.html">LuGallerie</a></li>
         <li><a href="music.html">LuMusic</a></li>
         <li><a href="about.html">LuLinks</a></li>
       </ul>
-          <!-- Right logo + language -->
-    <div class="right-section">
-           <select class="language-select" onchange="changeLanguage(this.value)">
-        <option value="de">DE</option>
-        <option value="en">EN</option>
-        <option value="it">IT</option>
-        <option value="fr">FR</option>
-      </select>
-     <a href="index.html" class="logo-link">
-      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
-    </a>
-    </div>
+
+      <!-- Desktop row -->
+      <div class="desktop-row">
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="arte.html" class="active">LuArte</a></li>
+          <li><a href="gallerie.html">LuGallerie</a></li>
+          <li><a href="music.html">LuMusic</a></li>
+          <li><a href="about.html">LuLinks</a></li>
+        </ul>
+
+        <div class="right-block">
+          <select class="language-select" onchange="changeLanguage(this.value)">
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+            <option value="it">IT</option>
+            <option value="fr">FR</option>
+          </select>
+          <a href="index.html" class="logo-link">
+            <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
+          </a>
+        </div>
+      </div>
+
     </div>
   </nav>
 
-  <div class="burger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
   <div class="container">
-   
-<div class="gallery">
-  <div class="gallery-item"><img src="art1.jpg" alt="Artwork 1" /></div>
-  <div class="gallery-item"><img src="art2.jpg" alt="Artwork 2" /></div>
-  <div class="gallery-item"><img src="art3.jpg" alt="Artwork 3" /></div>
-  <div class="gallery-item"><img src="art4.jpg" alt="Artwork 4" /></div>
-  <div class="gallery-item"><img src="art5.jpg" alt="Artwork 5" /></div>
-  <div class="gallery-item"><img src="art6.jpg" alt="Artwork 6" /></div>
-  <div class="gallery-item"><img src="art7.jpg" alt="Artwork 7" /></div>
-  <div class="gallery-item"><img src="art8.jpg" alt="Artwork 8" /></div>
-  <div class="gallery-item"><img src="art9.jpg" alt="Artwork 9" /></div>
-  <div class="gallery-item"><img src="art10.jpg" alt="Artwork 10" /></div>
-  <div class="gallery-item"><img src="art11.jpg" alt="Artwork 11" /></div>
-  <div class="gallery-item"><img src="art12.jpg" alt="Artwork 12" /></div>
-</div>
+    <div class="gallery">
+      <div class="gallery-item"><img src="art1.jpg" alt="Artwork 1" /></div>
+      <div class="gallery-item"><img src="art2.jpg" alt="Artwork 2" /></div>
+      <div class="gallery-item"><img src="art3.jpg" alt="Artwork 3" /></div>
+      <div class="gallery-item"><img src="art4.jpg" alt="Artwork 4" /></div>
+      <div class="gallery-item"><img src="art5.jpg" alt="Artwork 5" /></div>
+      <div class="gallery-item"><img src="art6.jpg" alt="Artwork 6" /></div>
+      <div class="gallery-item"><img src="art7.jpg" alt="Artwork 7" /></div>
+      <div class="gallery-item"><img src="art8.jpg" alt="Artwork 8" /></div>
+      <div class="gallery-item"><img src="art9.jpg" alt="Artwork 9" /></div>
+      <div class="gallery-item"><img src="art10.jpg" alt="Artwork 10" /></div>
+      <div class="gallery-item"><img src="art11.jpg" alt="Artwork 11" /></div>
+      <div class="gallery-item"><img src="art12.jpg" alt="Artwork 12" /></div>
+    </div>
   </div>
-
-<script>
-  function changeLanguage(lang) {
-    if (lang === 'en') {
-      window.location.href = 'en_index.html';
-    } else {
-      alert("Only English is available right now.");
-    }
-  }
-</script>
 
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('.nav-links');
-      nav.classList.toggle('open');
+      const mobileNav = document.querySelector('.mobile-nav-links');
+      if (mobileNav) {
+        mobileNav.classList.toggle('open');
+      }
     }
+
+    function changeLanguage(lang) {
+      if (lang === 'en') {
+        window.location.href = 'en_index.html';
+      } else {
+        alert("Only English is available right now.");
+      }
+    }
+
+    // Close menu on link click (optional)
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.mobile-nav-links').classList.remove('open');
+        });
+      });
+    });
   </script>
 </body>
 </html>
