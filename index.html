@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,49 +7,72 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="lucianino-memoji.png" />
 </head>
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.toggle('open');
-  }
-</script>
 <body>
-<nav class="top-nav">
-  <div class="nav-content">
-    <!-- Left logo -->
+  <nav class="top-nav">
+    <div class="nav-content">
+
+      <!-- Mobile row -->
+      <div class="top-row">
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+        </a>
+
+        <!-- Mobile nav menu -->
+<ul class="mobile-nav-links">
+  <li><a href="arte.html">LuArte</a></li>
+  <li><a href="gallerie.html">LuGallerie</a></li>
+  <li><a href="music.html">LuMusic</a></li>
+  <li><a href="about.html">LuLinks</a></li>
+</ul>
+
+
+        <div class="burger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <select class="language-select" onchange="changeLanguage(this.value)">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+          <option value="fr">FR</option>
+        </select>
+
+        <a href="index.html" class="logo-link">
+          <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
+        </a>
+      </div>
+
+<!-- Desktop row -->
+<div class="desktop-row">
+  <a href="index.html" class="logo-link">
+    <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="arte.html">LuArte</a></li>
+    <li><a href="gallerie.html">LuGallerie</a></li>
+    <li><a href="music.html">LuMusic</a></li>
+    <li><a href="about.html">LuLinks</a></li>
+  </ul>
+
+  <div class="right-block">
+    <select class="language-select" onchange="changeLanguage(this.value)">
+      <option value="de">DE</option>
+      <option value="en">EN</option>
+      <option value="it">IT</option>
+      <option value="fr">FR</option>
+    </select>
     <a href="index.html" class="logo-link">
-      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
+      <img src="minimal_logo.png" alt="Logo Right" class="nav-logo" />
     </a>
+  </div>
+</div>
 
-    <!-- Center nav links -->
-    <ul class="nav-links">
-      <li><a href="arte.html">LuArte</a></li>
-      <li><a href="gallerie.html">LuGallerie</a></li>
-      <li><a href="music.html">LuMusic</a></li>
-      <li><a href="about.html">LuLinks</a></li>
-    </ul>
 
-    <!-- Right logo + language -->
-    <div class="right-section">
-           <select class="language-select" onchange="changeLanguage(this.value)">
-        <option value="de">DE</option>
-        <option value="en">EN</option>
-        <option value="it">IT</option>
-        <option value="fr">FR</option>
-      </select>
-     <a href="index.html" class="logo-link">
-      <img src="minimal_logo.png" alt="Logo Left" class="nav-logo" />
-    </a>
     </div>
-  </div>
-</nav>
-
-
-  <div class="burger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  </nav>
 
   <div class="container">
     <img src="luarte-logo.png" alt="Luarte Logo" class="top-logo" />
@@ -61,7 +83,17 @@
       <div class="under-construction">
         designed von Luciano Brigante, programmiert von Dario Tino
       </div>
+    </div>
+  </div>
+
 <script>
+  function toggleMenu() {
+    const mobileNav = document.querySelector('.mobile-nav-links');
+    if (mobileNav) {
+      mobileNav.classList.toggle('open');
+    }
+  }
+
   function changeLanguage(lang) {
     if (lang === 'en') {
       window.location.href = 'en/en_index.html';
@@ -71,7 +103,5 @@
   }
 </script>
 
-    </div>
-  </div>
 </body>
 </html>
