@@ -348,3 +348,12 @@ body {
           drop-shadow(0 0 6px #ff5900);
   transition: filter 0.3s ease;
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two cards per row */
+  gap: 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
