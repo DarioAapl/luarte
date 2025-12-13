@@ -103,9 +103,12 @@ body {
   transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-  color: #888;
+/* Link hover — color only, no glow */
+.nav-links li a:hover,
+.nav-links li a.active:hover {
+  color: rgb(100, 0, 233);
 }
+
 
 /* --- Burger Menu --- */
 .burger {
@@ -204,10 +207,10 @@ body {
 .gallery-item img:hover {
   transform: scale(1.05);
   box-shadow:
-    0 0 6px 3px rgba(255, 80, 140, 0.9),
-    0 0 14px 6px rgba(255, 80, 140, 0.8),
-    0 0 28px 12px rgba(255, 80, 140, 0.6),
-    0 0 45px 20px rgba(255, 80, 140, 0.4);
+    0 0 6px 3px rgba(100, 0, 233, 0.9),
+    0 0 14px 6px rgba(100, 0, 233, 0.8),
+    0 0 28px 12px rgba(100, 0, 233, 0.6),
+    0 0 45px 20px rgba(100, 0, 233, 0.4);
   z-index: 10;
 }
 
@@ -239,7 +242,7 @@ body {
 
 .music-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 50px rgba(166, 33, 77, 0.6);
+  box-shadow: 0 0 50px rgba(100, 0, 233, 0.6);
 }
 
 .music-thumb {
@@ -267,7 +270,7 @@ body {
 }
 
 .language-dropdown select:hover {
-  box-shadow: 0 0 15px rgba(166, 33, 77, 0.5);
+  box-shadow: 0 0 15px rgba(100, 0, 233, 0.5);
 }
 
 .right-section {
@@ -293,9 +296,9 @@ body {
 }
 
 .card {
-  background-color: #1a1a1a;
-  border: 1px rgb(166, 33, 77);
-  border-radius: 12px;
+  background-color: #000000;
+  border: 1px rgb(100, 0, 233);
+  border-radius: 25px;
   padding: 1rem;
   text-align: center;
   color: #ffffff;
@@ -305,7 +308,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 12px rgba(166, 33, 77, 0.6);
+  box-shadow: 0 0 12px rgba(100, 0, 233, 0.6);
 }
 
 /* Base link */
@@ -320,11 +323,7 @@ body {
 /* Hover effect (for all links) */
 .nav-links li a:hover,
 .nav-links li a.active:hover {
-  color: #ffffff;
-  text-shadow:
-    0 0 19px rgb(166, 33, 77),
-    0 0 22px rgb(166, 33, 77),
-    0 0 25px rgb(166, 33, 77);
+  color: rgb(100, 0, 233)
 }
 
 
@@ -338,33 +337,34 @@ body {
 .nav-links li a.active:hover {
   color: #888;
   text-shadow:
-    0 0 19px rgb(166, 33, 77),
-    0 0 22px rgb(166, 33, 77),
-    0 0 25px rgb(166, 33, 77);
+    0 0 19px rgb(100, 0, 233),
+    0 0 22px rgb(100, 0, 233),
+    0 0 25px rgb(100, 0, 233);
 }
 
 /* Logo glow on hover */
 .nav-logo:hover {
-  filter: drop-shadow(0 0 2px rgb(166, 33, 77))
-          drop-shadow(0 0 4px rgb(166, 33, 77))
-          drop-shadow(0 0 6px rgb(166, 33, 77));
+  filter: drop-shadow(0 0 2px rgb(100, 0, 233))
+          drop-shadow(0 0 4px rgb(100, 0, 233))
+          drop-shadow(0 0 6px rgb(100, 0, 233));
   transition: filter 0.3s ease;
 }
 
 
 .language-select:hover {
-  filter: drop-shadow(0 0 2px rgb(166, 33, 77))
-          drop-shadow(0 0 4px rgb(166, 33, 77))
-          drop-shadow(0 0 6px rgb(166, 33, 77));
+  filter: drop-shadow(0 0 2px rgb(100, 0, 233))
+          drop-shadow(0 0 4px rgb(100, 0, 233))
+          drop-shadow(0 0 6px rgb(100, 0, 233));
   transition: filter 0.3s ease;
 }
 
 
 .card-grid {
   display: grid;
+  background-color: #000000;
   grid-template-columns: repeat(2, 1fr); /* two cards per row */
   gap: 2rem;
-  max-width: 800px;
+  max-width: 600px;
   margin: 3rem auto;
   padding: 0 1rem;
 }
@@ -403,7 +403,7 @@ body {
   .burger div {
     width: 30px;
     height: 3px;
-    background-color:rgb(166, 33, 77);
+    background-color:rgb(100, 0, 233);
   }
 
   .language-select {
