@@ -202,12 +202,16 @@ body {
 }
 
 .gallery-item img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   box-shadow:
-    0 0 3px 2px rgb(255, 255, 255),
-    0 0 7px 5px rgb(255, 255, 255);
+    0 0 6px 3px rgba(255, 80, 140, 0.9),
+    0 0 14px 6px rgba(255, 80, 140, 0.8),
+    0 0 28px 12px rgba(255, 80, 140, 0.6),
+    0 0 45px 20px rgba(255, 80, 140, 0.4);
   z-index: 10;
 }
+
+
 
 .music-container {
   padding-top: 100px;
@@ -235,7 +239,7 @@ body {
 
 .music-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(255, 112, 0, 0.6);
+  box-shadow: 0 0 50px rgba(166, 33, 77, 0.6);
 }
 
 .music-thumb {
@@ -263,7 +267,7 @@ body {
 }
 
 .language-dropdown select:hover {
-  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+  box-shadow: 0 0 15px rgba(166, 33, 77, 0.5);
 }
 
 .right-section {
@@ -290,7 +294,7 @@ body {
 
 .card {
   background-color: #1a1a1a;
-  border: 1px solid #ff5800;
+  border: 1px rgb(166, 33, 77);
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
@@ -301,7 +305,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 12px rgba(255, 112, 0, 0.6);
+  box-shadow: 0 0 12px rgba(166, 33, 77, 0.6);
 }
 
 /* Base link */
@@ -318,12 +322,11 @@ body {
 .nav-links li a.active:hover {
   color: #ffffff;
   text-shadow:
-    0 0 1px #ffb347,
-    0 0 2px #ff8000,
-    0 0 3px #ff6600,
-    0 0 4px #ff3300,
-    0 0 6px #ff0000;
+    0 0 19px rgb(166, 33, 77),
+    0 0 22px rgb(166, 33, 77),
+    0 0 25px rgb(166, 33, 77);
 }
+
 
 
 /* Active link (gray) */
@@ -335,31 +338,27 @@ body {
 .nav-links li a.active:hover {
   color: #888;
   text-shadow:
-    0 0 1px #ffb347,
-    0 0 2px #ff8000,
-    0 0 3px #ff6600,
-    0 0 4px #ff3300,
-    0 0 6px #ff0000;
+    0 0 19px rgb(166, 33, 77),
+    0 0 22px rgb(166, 33, 77),
+    0 0 25px rgb(166, 33, 77);
 }
 
 /* Logo glow on hover */
 .nav-logo:hover {
-  filter: drop-shadow(0 0 1px #ffb347)
-          drop-shadow(0 0 2px #ff8000)
-          drop-shadow(0 0 3px #ff6600)
-          drop-shadow(0 0 4px #ff3300)
-          drop-shadow(0 0 6px #ff0000);
+  filter: drop-shadow(0 0 2px rgb(166, 33, 77))
+          drop-shadow(0 0 4px rgb(166, 33, 77))
+          drop-shadow(0 0 6px rgb(166, 33, 77));
   transition: filter 0.3s ease;
 }
 
+
 .language-select:hover {
-  filter: drop-shadow(0 0 1px #ffb347)
-          drop-shadow(0 0 2px #ff8000)
-          drop-shadow(0 0 3px #ff6600)
-          drop-shadow(0 0 4px #ff3300)
-          drop-shadow(0 0 6px #ff5900);
+  filter: drop-shadow(0 0 2px rgb(166, 33, 77))
+          drop-shadow(0 0 4px rgb(166, 33, 77))
+          drop-shadow(0 0 6px rgb(166, 33, 77));
   transition: filter 0.3s ease;
 }
+
 
 .card-grid {
   display: grid;
@@ -404,7 +403,7 @@ body {
   .burger div {
     width: 30px;
     height: 3px;
-    background-color: orange;
+    background-color:rgb(166, 33, 77);
   }
 
   .language-select {
