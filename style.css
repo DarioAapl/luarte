@@ -121,7 +121,7 @@ body {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #FF7000;
+  background-color: #000000;
   transition: all 0.3s ease;
 }
 
@@ -231,12 +231,12 @@ body {
 }
 
 .music-card {
-  background-color: #1c1c1c;
-  border-radius: 12px;
+  background-color: #000000;
+  border-radius: 25px;
   padding: 1rem;
   text-decoration: none;
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(255, 112, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -330,7 +330,7 @@ body {
 
 /* Active link (gray) */
 .nav-links li a.active {
-  color: #888; /* or your preferred gray */
+  color: rgb(100, 0, 233); /* or your preferred gray */
 }
 
 /* Active link hover effect */
